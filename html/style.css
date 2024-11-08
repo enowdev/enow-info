@@ -1,0 +1,173 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Server Name */
+.server-name {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.glow-text {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #ffffff;
+}
+
+/* Player Info */
+.player-info {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 8px;
+    width: 180px;
+    z-index: 1000;
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px;
+    color: #ffffff;
+}
+
+.info-row i {
+    width: 16px;
+    text-align: center;
+    font-size: 14px;
+    color: #2ecc71;
+    text-shadow: none;
+}
+
+.info-row span {
+    flex-grow: 1;
+    text-align: right;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Icon Colors */
+.id i { color: #3498db; }
+.bank i { color: #e74c3c; }
+
+/* Value Update Animation */
+@keyframes valueUpdate {
+    0% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.value-updated {
+    animation: valueUpdate 0.3s ease;
+}
+
+/* Edit Button */
+.edit-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1001;
+    transition: all 0.3s ease;
+}
+
+.edit-button i {
+    color: white;
+    font-size: 18px;
+}
+
+.edit-button:hover {
+    background: rgba(52, 152, 219, 0.8);
+}
+
+/* Edit Menu */
+.edit-menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    z-index: 1002;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.close-menu {
+    cursor: pointer;
+}
+
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.menu-item label {
+    font-size: 14px;
+}
+
+.menu-item input[type="range"] {
+    width: 150px;
+}
+
+button {
+    background: #3498db;
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+/* Draggable Elements */
+.draggable {
+    cursor: move;
+}
+
+.dragging {
+    opacity: 0.8;
+    border: 2px dashed #3498db;
+} 
